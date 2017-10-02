@@ -23,7 +23,10 @@ class Php71LibsodiumAT10 < AbstractPhp71Extension
 
   def install
     safe_phpize
-    system "./configure", "--prefix=#{prefix}", phpconfig
+    system "./configure",
+      "--with-libsodium=#{Formula["libsodium"].opt_prefix}",
+      "--prefix=#{prefix}",
+      phpconfig
     system "make"
     prefix.install "modules/libsodium.so"
     write_config_file if build.with? "config-file"

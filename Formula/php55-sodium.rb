@@ -21,7 +21,10 @@ class Php55Sodium < AbstractPhp55Extension
     ENV.universal_binary if build.universal?
 
     safe_phpize
-    system "./configure", "--prefix=#{prefix}", phpconfig
+    system "./configure",
+      "--with-sodium=#{Formula["libsodium"].opt_prefix}",
+      "--prefix=#{prefix}",
+      phpconfig
     system "make"
     prefix.install "modules/sodium.so"
     write_config_file if build.with? "config-file"
