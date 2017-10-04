@@ -9,7 +9,6 @@ class Php55Libsodium < AbstractPhp55Extension
   head "https://github.com/jedisct1/libsodium-php.git"
 
   bottle do
-    cellar :any
     sha256 "b1dd0916b4ef9f9567f3c528113310a2526615e40ff282d7152e7d6a5ce2da58" => :el_capitan
     sha256 "b0685f2b5609290784bd9ffb1c488c03eb7c08194cf50857389ecdd0114f0840" => :yosemite
     sha256 "edd7fab6cc0c13d59d5c60016210f70f5daf540978cb9edf9eb7b5f1eb035750" => :mavericks

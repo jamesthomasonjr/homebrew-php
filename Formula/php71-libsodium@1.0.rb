@@ -9,7 +9,6 @@ class Php71LibsodiumAT10 < AbstractPhp71Extension
   head "https://github.com/jedisct1/libsodium-php.git"
 
   bottle do
-    cellar :any
     sha256 "74d31706bb4daeb74f619b149f686334e7317cfa7e8530e50fbd42697873ff77" => :high_sierra
     sha256 "2aed03ae0d8970032147356a577f68809cc28d8ac3500f19f1ad451a10ebfa17" => :sierra
     sha256 "7289833eefccf59bad857d2db7d7e74489c2d37ebd39812f7ec2cbb767ddb2bc" => :el_capitan
